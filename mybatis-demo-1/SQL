@@ -1,0 +1,21 @@
+#建表SQL
+DROP TABLE IF EXISTS user;
+
+CREATE TABLE user
+(
+	id BIGINT(20) NOT NULL COMMENT '主键ID',
+	name VARCHAR(30) NULL DEFAULT NULL COMMENT '姓名',
+	age INT(11) NULL DEFAULT NULL COMMENT '年龄',
+	email VARCHAR(50) NULL DEFAULT NULL COMMENT '邮箱',
+	PRIMARY KEY (id)
+);
+
+#插入实体数据
+DELETE FROM user;
+
+INSERT INTO user (id, name, age, email) VALUES
+(1, 'Jone', 17, 'test1@macky.com'),
+(2, 'Jack', 18, 'test2@macky.com'),
+(3, 'Tom', 19, 'test3@macky.com'),
+(4, 'Sandy', 20, 'test4@macky.com'),
+(5, 'Billie', 21, 'test5@macky.com');
